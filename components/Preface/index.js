@@ -48,7 +48,7 @@ export default function Preface() {
     return (
         <React.Fragment>
             <Container>
-                <Photo src={"/photo.jpg"} alt={"profile"}  />
+                <Photo src={"/photo.jpg"} alt={"profile"} draggable={false} />
 
                 <PresentationContainer>
                     <Presentation>

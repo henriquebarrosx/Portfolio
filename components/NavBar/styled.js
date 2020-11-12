@@ -1,13 +1,14 @@
 import styled  from 'styled-components';
 
 const Container = styled.div`
-    top: 0;
-    z-index: 10;
-    width: 100%;
-    height: 70px;
-    border: none;
-    position: fixed;
-    transition: .3s;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 70px;
+  border: none;
+  position: fixed;
+  transition: .3s;
+  background-color: #1d1b24;
 `
 
 const Logo = styled.a`
@@ -31,6 +32,10 @@ const LogoContainer = styled.div`
     display: flex;
     margin: 0 25px;
     align-items: center;
+    
+     @media(max-width: 750px) {
+      margin: 0 10px
+    }
 `
 
 const NavBarLinksContainer = styled.ul`
@@ -40,6 +45,10 @@ const NavBarLinksContainer = styled.ul`
     margin: 0 35px;
     align-items: center;
     justify-content: flex-end;
+    
+    @media(max-width: 750px) {
+      display: none;
+    }
 `
 
 const NavBarLink = styled.a`

@@ -13,7 +13,7 @@ export default function Home() {
     flex-direction: column;
    `
 
-  return (
+    return (
     <React.Fragment>
       <Head>
         <title>Portfolio</title>
