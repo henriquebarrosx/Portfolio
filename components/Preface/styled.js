@@ -24,7 +24,7 @@ const Photo = styled.img`
     margin: 0 auto;
     max-height: 550px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 18px 18px #2a2830;
     
     @media (max-width: 1500px) {
@@ -177,7 +177,7 @@ const SocialLink = styled.a`
   font-style: normal;
   text-decoration: none;
   letter-spacing: .5px;
-  font-family: "roboto",sans-serif;
+  font-family: "roboto",sans-serif !important;
   
   @media(max-width: 750px) {
      margin: 0 auto;

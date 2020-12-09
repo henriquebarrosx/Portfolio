@@ -58,7 +58,7 @@ const NavBarLink = styled.a`
     transition: .1s;
     cursor: pointer;
     font-weight: 700;
-    border-radius: 8px;
+    border-radius: 2px;
     padding: 8px 12px;
     place-items: center;
     text-decoration: none;

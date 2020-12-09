@@ -18,7 +18,7 @@ export const Container = styled.div`
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  border-radius: 20px;
+  border-radius: 6px;
   align-items: center;
   margin: 0 auto 30px;
   transition: all .3s;
@@ -33,7 +33,7 @@ export const Container = styled.div`
   	z-index: -2;
   	height: 100%;
   	position: absolute;
-  	border-radius: 20px;
+  	border-radius: 6px;
   	background-color: #1d1b24;
   }
   
@@ -46,7 +46,7 @@ export const Container = styled.div`
     height: 100%;
     position: absolute;
     transition: all .3s;
-    border-radius: 16px;
+    border-radius: 4px;
     background-color: #33ffa9;
   }
   

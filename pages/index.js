@@ -25,7 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <Sections>
+      <Sections id={'home'}>
         <NavBar isScreenTop={screenPosition.isScreenTop} />
         <Preface />
         <Resume />
