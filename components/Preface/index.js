@@ -16,16 +16,12 @@ import {
 
 export default function Preface() {
     const emailLinkAPI = "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=henriquebarrosx@gmail.com";
-
     const emailSubject = "Topa marcar uma conversa?";
-
-    const emailComposer = "Fala, Henrique, tudo bem?. Estava dando uma espiada aqui no seu portfólio e fiquei bastante " +
-        "curioso(a) para saber um pouco mais sobre você! O que você acha de marcarmos um momento para conversar?"
-
+    
     const socialData = [
         {
             label: "Gmail",
-            link: `${emailLinkAPI}&su=${emailSubject}&body=${emailComposer}`
+            link: `${emailLinkAPI}&su=${emailSubject}`
         },
         {
             label: "LinkedIn",
