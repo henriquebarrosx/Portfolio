@@ -9,7 +9,7 @@ import {
     NavBarLinksContainer,
 } from './styled'
 
-export default function NavBar() {
+export default function NavBar({ isScreenTop }) {
     const menuOptions = [
         {
             label: "Home",
@@ -24,24 +24,26 @@ export default function NavBar() {
             link: "#timeLine",
         },
     ];
-
+    
+    const githubRepository = 'https://github.com/Henryxavierb/portfolio';
+    
     return (
-        <React.Fragment>
-            <Container>
-                <LogoContainer>
-                    <Logo as="a" href="https://github.com/Henryxavierb/dev-portfolio" target="_blank">
-                        Portfolio
-                    </Logo>
-                </LogoContainer>
-
-                <NavBarLinksContainer>
-                    {menuOptions.map(({ label, link }) => (
-                        <NavbarLinkItem key={label}>
-                            <NavBarLink as="a" href={link}>{label}</NavBarLink>
-                        </NavbarLinkItem>
-                    ))};
-                </NavBarLinksContainer>
-            </Container>
-        </React.Fragment>
+      <React.Fragment>
+          <Container isScreenTop={isScreenTop}>
+              <LogoContainer>
+                  <Logo as="a" href={githubRepository} target="_blank">
+                      Portfolio
+                  </Logo>
+              </LogoContainer>
+              
+              <NavBarLinksContainer>
+                  {menuOptions.map(({ label, link }) => (
+                    <NavbarLinkItem key={label}>
+                        <NavBarLink as="a" href={link}>{label}</NavBarLink>
+                    </NavbarLinkItem>
+                  ))};
+              </NavBarLinksContainer>
+          </Container>
+      </React.Fragment>
     )
 }

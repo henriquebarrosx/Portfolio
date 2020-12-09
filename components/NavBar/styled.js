@@ -8,7 +8,7 @@ const Container = styled.div`
   border: none;
   position: fixed;
   transition: .3s;
-  background-color: #1d1b24;
+  background-color: ${({ isScreenTop }) => isScreenTop ? '#1d1b24' : '#2a2830'};
 `
 
 const Logo = styled.a`
