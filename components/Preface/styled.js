@@ -28,7 +28,7 @@ const Photo = styled.img`
     box-shadow: 18px 18px #2a2830;
     
     @media (max-width: 1500px) {
-      height: 50vh;
+      height: 65vh;
     }
     @media (max-width: 1280px) {
       height: 50vh;
