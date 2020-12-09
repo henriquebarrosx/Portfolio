@@ -41,7 +41,7 @@ export default function NavBar({ isScreenTop }) {
                     <NavbarLinkItem key={label}>
                         <NavBarLink as="a" href={link}>{label}</NavBarLink>
                     </NavbarLinkItem>
-                  ))};
+                  ))}
               </NavBarLinksContainer>
           </Container>
       </React.Fragment>
