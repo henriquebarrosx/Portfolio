@@ -36,7 +36,7 @@ export default function TimeLine() {
 	
 	return (
 		<Container id={'timeLine'}>
-			<SectionTitle title={'Place of Works'} />
+			<SectionTitle title={'Places of Works'} />
 			
 			<PlacesContainer>
 				{timeLine.map(({ place, office, link ,time }) => (
