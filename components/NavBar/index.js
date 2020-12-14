@@ -16,12 +16,12 @@ export default function NavBar({ isScreenTop }) {
             link: "#home",
         },
         {
-            label: "Projects",
-            link: "#projects",
-        },
-        {
             label: "Time Line",
             link: "#timeLine",
+        },
+        {
+            label: "Projects",
+            link: "#projects",
         },
     ];
     
