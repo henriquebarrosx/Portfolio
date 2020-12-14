@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Link } from './styled';
 
 export default function Resume() {
-	const resumePath = 'https://drive.google.com/file/d/1ubZkcONptXkNy2vyWZIzAeh9jjKn8dXM/view?usp=sharing';
+	const resumePath = process.env.NEXT_PUBLIC_RESUME_LINK;
 	
 	return (
 		<Container>
