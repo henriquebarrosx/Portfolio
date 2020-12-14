@@ -17,12 +17,14 @@ const Logo = styled.a`
     font-size: 35px;
     font-weight: 700;
     padding: 3px 10px;
-    border-radius: 8px;
+    border-radius: 2px;
     text-decoration: none;
     font-family: "Open Sans", sans-serif;
     
     &:hover {
-      text-decoration: underline;
+      color: #23272d;
+      font-weight: 600;
+      background-color: #33ffa9;
     }
 `
 
