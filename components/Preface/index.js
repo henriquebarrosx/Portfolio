@@ -19,10 +19,10 @@ export default function Preface() {
     const emailSubject = "Topa marcar uma conversa?";
     
     const socialData = [
-        {
-            label: "Gmail",
-            link: `${emailLinkAPI}&su=${emailSubject}`
-        },
+        // {
+        //     label: "Gmail",
+        //     link: `${emailLinkAPI}&su=${emailSubject}`
+        // },
         {
             label: "LinkedIn",
             link: "https://www.linkedin.com/in/henrique-barros-xavier-706a04178"
