@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import NavBar from '../components/NavBar';
 import Resume from '../components/Resume';
 import Preface from '../components/Preface';
-import TimeLine from '../components/TimeLine';
+import TimeLine from '../components/TimeLine/view';
 
 const Sections = styled.div`
     width: 100%;
