@@ -1,9 +1,11 @@
 import React from 'react';
 import Head from 'next/head'
+
 import styled from 'styled-components';
-import NavBar from '../components/NavBar'
-import Preface from '../components/Preface'
+import NavBar from '../components/NavBar';
 import Resume from '../components/Resume';
+import Preface from '../components/Preface';
+import TimeLine from '../components/TimeLine';
 
 const Sections = styled.div`
     width: 100%;
@@ -22,13 +24,14 @@ export default function Home() {
     <React.Fragment>
       <Head>
         <title>Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.svg" />
       </Head>
       
       <Sections id={'home'}>
         <NavBar isScreenTop={screenPosition.isScreenTop} />
         <Preface />
         <Resume />
+        <TimeLine />
       </Sections>
     </React.Fragment>
   )
