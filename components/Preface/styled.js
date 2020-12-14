@@ -12,8 +12,13 @@ const Container = styled.div`
     margin-bottom: 50px;
     flex-direction: column;
   }
+  
   @media(max-width: 750px) {
     width: 100%;
+  }
+  
+  @media(max-width: 750px) {
+   margin: 0 auto 10px;
   }
 `
 
@@ -58,7 +63,7 @@ const PresentationContainer = styled.div`
 
 const Presentation = styled.span`
   display: flex;
-  max-width: 600px;
+  max-width: 700px;
   font-weight: 700;
   flex-direction: column;
   font-family: "roboto",sans-serif;
@@ -76,16 +81,21 @@ const Presentation = styled.span`
 `
 
 const PresentationTitle = styled.span`
+  width: 100%;
   color: #33ffa9;
-  font-size: 95px;
+  font-size: 80px;
   line-height: 80px;
   font-family: "roboto",sans-serif;
   
   @media(max-width: 1280px) {
-     font-size: 80px;
+     font-size: 70px;
   }
   @media(max-width: 750px) {
      font-size: 50px;
+  }
+  
+  @media(max-width: 400px) {
+     font-size: 40px;
   }
 `
 
