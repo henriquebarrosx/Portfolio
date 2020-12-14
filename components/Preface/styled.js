@@ -163,8 +163,10 @@ const SocialItem = styled.li`
   align-items: center;
   letter-spacing: 1.2px;
   
-  ${SocialContainer}:hover > &:not(:hover){
-    opacity: 0.2;
+  @media(hover: hover) {
+    ${SocialContainer}:hover > &:not(:hover){
+      opacity: 0.2;
+    }
   }
     
   &:not(:last-child) {
