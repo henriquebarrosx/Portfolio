@@ -63,27 +63,12 @@ export const Place = styled.a`
 	text-decoration: none;
 `;
 
-export const BlurText = styled.span`
-	color: #33ffa9;
-	margin: 40% auto;
-	font-weight: 700;
-	padding: 10px 54px;
-	transition: all 0.3s;
-	text-transform: uppercase;
-	
-	&:hover {
-		color: #1d1b24;
-		border-radius: 6%;
-		background-color: #33ffa9;
-	}
-`;
-
 export const BlurBackground = styled.div`
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
 	opacity: 0;
+	bottom: 60px;
 	display: flex;
 	position: absolute;
 	align-items: flex-start;
@@ -93,7 +78,19 @@ export const BlurBackground = styled.div`
 	@media(hover:hover) {
 		&:hover {
 			opacity: 0.90;
+			border-radius: 6%;
+			border: 1px solid #33ffa9;
+		  box-shadow: inset 0 0 0, 0 0 0.35em #33ffa9;
+
 		}
 	}
 `;
 
+export const BlurText = styled.span`
+	color: #33ffa9;
+	margin: 40% auto;
+	font-weight: bold;
+	padding: 10px 54px;
+	transition: all 0.3s;
+	text-transform: uppercase;
+`;
