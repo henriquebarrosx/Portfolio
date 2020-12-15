@@ -2,54 +2,63 @@ import React from 'react';
 import SectionTitle from '../../components/SectionTitle'
 
 import {
-	Time,
 	Place,
-	Office,
+	BlurText,
 	Container,
-	TextContainer,
+	CompanyAvatar,
+	BlurBackground,
 	PlacesContainer,
 	TimeLineContainer,
 } from './styled.js';
 
+const timeLine = [
+	{
+		place: 'Sua Formatura',
+		time: '08.2019 - 04.2020',
+		avatar: './suaformatura.png',
+		office: 'Front-end web developer',
+		link: 'https://suaformatura.com/',
+	},
+	{
+		place: 'Labbits',
+		avatar: './labbits.png',
+		time: '07.2020 - 08.2020',
+		office: 'Full stack web developer',
+		link: 'https://www.labbitspace.com/',
+	},
+	{
+		place: 'Softwrap',
+		avatar: '/softwrap.jpeg',
+		time: '08.2020 - Current Work',
+		link: 'https://softwrap.com.br/',
+		office: 'Full stack web developer',
+	}
+];
+
 export default function TimeLine() {
-	
-	const timeLine = [
-		{
-			time: '08.2019 - 04.2020',
-			place: 'Sua Formatura - Maceió',
-			office: 'Front-end web developer',
-			link: 'https://suaformatura.com/',
-		},
-		{
-			time: '07.2020 - 08.2020',
-			place: 'Labbits - Maceió',
-			office: 'Full stack web developer',
-			link: 'https://www.labbitspace.com/',
-		},
-		{
-			place: 'Softwrap - São Paulo',
-			time: '08.2020 - Current Work',
-			link: 'https://softwrap.com.br/',
-			office: 'Full stack web developer',
-		}
-	];
 	
 	return (
 		<Container id={'timeLine'}>
 			<SectionTitle title={'Timeline'} />
 			
 			<PlacesContainer>
-				{timeLine.map(({ place, office, link ,time }) => (
-					<TimeLineContainer key={place}>
-						<TextContainer>
-							<Place link={'a'} href={link} target={'_blank'}>{place}</Place>
-							<Office>{office}</Office>
-						</TextContainer>
-						
-						<Time>{time}</Time>
-					</TimeLineContainer>
-				))}
+				{timeLine.map(work => <Work work={work} />)}
 			</PlacesContainer>
 		</Container>
+	)
+}
+
+function Work({ work }) {
+	const { place, avatar, link, shadowColor } = work;
+	
+	return (
+		<TimeLineContainer key={place}>
+			<BlurBackground>
+				<BlurText>More</BlurText>
+			</BlurBackground>
+			
+			<CompanyAvatar src={avatar} shadowColor={shadowColor} />
+			<Place as={'a'} href={link} target={'_blank'}>{place}</Place>
+		</TimeLineContainer>
 	)
 }
