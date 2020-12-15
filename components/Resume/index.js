@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Link } from './styled';
 
 export default function Resume() {
-	const resumePath = process.env.VERCEL_ENV_RESUME_LINK;
+	const resumePath = process.env.NEXT_PUBLIC_RESUME_LINK;
 	
 	return (
 		<Container>
