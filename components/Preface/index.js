@@ -1,4 +1,11 @@
-import React from 'react'
+import React from 'react';
+
+import {
+    FaGithub,
+    FaLinkedin,
+    FaInstagram,
+    FaTwitterSquare
+} from "react-icons/fa";
 
 import {
     Photo,
@@ -25,18 +32,22 @@ export default function Preface() {
         // },
         {
             label: "LinkedIn",
+            icon: FaLinkedin,
             link: "https://www.linkedin.com/in/henrique-barros-xavier-706a04178"
         },
         {
             label: "Twitter",
+            icon: FaTwitterSquare,
             link: "https://twitter.com/Henry_bhx"
         },
         {
             label: "Instagram",
+            icon: FaInstagram,
             link: "https://www.instagram.com/bh_xavier"
         },
         {
             label: "Github",
+            icon: FaGithub,
             link: "https://github.com/henryxavierb",
         },
     ]
@@ -62,9 +73,11 @@ export default function Preface() {
 
                     <SocialSection>
                         <SocialContainer>
-                            {socialData.map(({ label, link }) => (
+                            {socialData.map(({ label, link, icon: Icon }) => (
                                 <SocialItem key={label}>
-                                    <SocialLink as={"a"} href={link} target={"_blank"}>{label}</SocialLink>
+                                    <SocialLink as={"a"} href={link} target={"_blank"}>
+                                        <Icon size={42} color={'#fdfafe'} />
+                                    </SocialLink>
                                 </SocialItem>
                             ))}
                         </SocialContainer>

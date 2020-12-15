@@ -138,9 +138,11 @@ const SocialSection = styled.div`
   margin-top: 55px;
   border-radius: 4px;
   align-items: center;
-  justify-content: center;
-  background-color: #33ffa9;
-  box-shadow: 8px 8px rgba(83,246,199,.08);
+  justify-content: flex-end;
+  
+  @media(max-width: 1050px) {
+    justify-content: center;
+  }
   
   @media(max-width: 750px) {
     width: 92%;
@@ -159,7 +161,6 @@ const SocialItem = styled.li`
   height: 69px;
   display: flex;
   transition: .2s;
-  text-align: center;
   align-items: center;
   letter-spacing: 1.2px;
   
@@ -170,7 +171,7 @@ const SocialItem = styled.li`
   }
     
   &:not(:last-child) {
-    margin-right: 16px
+    margin-right: 20px
   }
   
   @media(max-width: 750px) {
