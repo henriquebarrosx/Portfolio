@@ -66,7 +66,6 @@ const Presentation = styled.span`
   max-width: 700px;
   font-weight: 700;
   flex-direction: column;
-  font-family: "roboto",sans-serif;
   
   @media(max-width: 1500px) {
     margin-top: 0;
@@ -85,7 +84,6 @@ const PresentationTitle = styled.span`
   color: #33ffa9;
   font-size: 80px;
   line-height: 80px;
-  font-family: "roboto",sans-serif;
   
   @media(max-width: 1280px) {
      font-size: 70px;
