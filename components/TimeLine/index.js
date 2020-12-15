@@ -42,7 +42,7 @@ export default function TimeLine() {
 			<SectionTitle title={'Timeline'} />
 			
 			<PlacesContainer>
-				{timeLine.map(work => <Work key={key.place} work={work} />)}
+				{timeLine.map(work => <Work key={work.place} work={work} />)}
 			</PlacesContainer>
 		</Container>
 	)
