@@ -54,7 +54,7 @@ export const CompanyAvatar = styled.img`
 	}
 `
 
-export const Place = styled.a`
+export const Place = styled.span`
 	color: #fdfafe;
 	margin: 18px 0;
 	font-size: 20px;

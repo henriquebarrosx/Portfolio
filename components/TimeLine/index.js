@@ -52,13 +52,15 @@ function Work({ work }) {
 	const { place, avatar, link, shadowColor } = work;
 	
 	return (
-		<TimeLineContainer key={place}>
+		<TimeLineContainer key={place} onClick={() => redirectTo(link)}>
 			<BlurBackground>
 				<BlurText>More</BlurText>
 			</BlurBackground>
 			
 			<CompanyAvatar src={avatar} shadowColor={shadowColor} />
-			<Place as={'a'} href={link} target={'_blank'}>{place}</Place>
+			<Place>{place}</Place>
 		</TimeLineContainer>
 	)
 }
+
+const redirectTo = (link) => window.location.href = link;
