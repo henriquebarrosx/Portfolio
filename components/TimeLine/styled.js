@@ -36,7 +36,7 @@ export const PlacesContainer = styled.div`
 	}
 `;
 
-export const TimeLineContainer = styled.div`
+export const TimeLineContainer = styled.a`
 	display: flex;
 	cursor: pointer;
 	position: relative;
