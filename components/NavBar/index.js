@@ -16,8 +16,8 @@ export default function NavBar({ isScreenTop }) {
             link: "#home",
         },
         {
-            label: "Timeline",
-            link: "#timeLine",
+            label: "Experiences",
+            link: "#experiences",
         },
         {
             label: "Projects",

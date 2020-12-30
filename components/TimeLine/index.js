@@ -49,8 +49,8 @@ export default function TimeLine() {
 	});
 	
 	return (
-		<Container id={'timeLine'}>
-			<SectionTitle title={'Timeline'} />
+		<Container id={'experiences'}>
+			<SectionTitle title={'Experiences'} />
 			
 			<Work
 				currentWork={currentWork}
