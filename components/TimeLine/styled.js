@@ -32,6 +32,7 @@ export const WorkImage = styled.img`
   display: flex;
   max-width: 1350px;
   border-radius: 6px;
+  transition: all .7s;
   align-items: center;
   justify-content: center;
 `;
@@ -44,13 +45,13 @@ export const WorkLink = styled.a`
   display: none;
   cursor: pointer;
   font-size: 18px;
-  overflow: hidden;
   font-weight: bold;
   position: relative;
   border-radius: 6px;
   color: transparent;
   transition: all .3s;
   align-items: center;
+  text-decoration: none;
   justify-content: center;
   text-transform: uppercase;
   border: 2px solid #33ffa9;
@@ -123,6 +124,7 @@ export const BlurEffect = styled.div`
   display: flex;
   position: absolute;
   transition: all .3s;
+  flex-direction: column;
 
   @media (hover: hover) {
     &:hover {
