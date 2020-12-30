@@ -2,13 +2,14 @@ import React from 'react';
 import SectionTitle from '../../components/SectionTitle'
 
 import {
-	Place,
-	BlurText,
+	WorkLink,
+	WorkImage,
 	Container,
-	CompanyAvatar,
-	BlurBackground,
-	PlacesContainer,
-	TimeLineContainer,
+	LeftArrow,
+	BlurEffect,
+	RightArrow,
+	WorkContainer,
+	ImageContainer,
 } from './styled.js';
 
 const timeLine = [
@@ -36,29 +37,28 @@ const timeLine = [
 ];
 
 export default function TimeLine() {
-	
 	return (
 		<Container id={'timeLine'}>
 			<SectionTitle title={'Timeline'} />
-			
-			<PlacesContainer>
-				{timeLine.map(work => <Work key={work.place} work={work} />)}
-			</PlacesContainer>
+			<Work />
 		</Container>
 	)
 }
 
-function Work({ work }) {
-	const { place, avatar, link, shadowColor } = work;
-	
+function Work({ link }) {
 	return (
-		<TimeLineContainer key={place} as={'a'}  href={link} target="_blank">
-			<BlurBackground>
-				<BlurText>More</BlurText>
-			</BlurBackground>
+		<WorkContainer>
+			<LeftArrow />
 			
-			<CompanyAvatar src={avatar} shadowColor={shadowColor} />
-			<Place>{place}</Place>
-		</TimeLineContainer>
+			<ImageContainer>
+				<WorkImage src={'/sua_formatura_site.png'} />
+				
+				<BlurEffect>
+					<WorkLink as='a' href={link} target='_blank'>Visitar</WorkLink>
+				</BlurEffect>
+			</ImageContainer>
+			
+			<RightArrow />
+		</WorkContainer>
 	)
 }
