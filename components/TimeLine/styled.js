@@ -35,6 +35,11 @@ export const WorkImage = styled.img`
   transition: all .7s;
   align-items: center;
   justify-content: center;
+  
+  @media(max-width: 800px) {
+    width: 95%;
+    margin: auto
+  }
 `;
 
 export const WorkLink = styled.a`
@@ -101,6 +106,10 @@ export const LeftArrow = styled(FaChevronLeft)`
       opacity: 0.3;
     }
   }
+  
+  @media(max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const RightArrow = styled(FaChevronRight)`
@@ -113,6 +122,10 @@ export const RightArrow = styled(FaChevronRight)`
     &:hover {
       opacity: 0.3;
     }
+  }
+  
+  @media(max-width: 800px) {
+    display: none;
   }
 `;
 
