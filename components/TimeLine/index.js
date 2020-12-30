@@ -112,7 +112,7 @@ function Work(props) {
 }
 
 function autoSlideTransition(currentWork, changeCurrentWork) {
-	timeOut = setTimeout(() => changeCurrentWork(getIndex(currentWork)), 7000)
+	timeOut = setTimeout(() => changeCurrentWork(getIndex(currentWork)), 10000)
 }
 
 function clearCurrentTimeout() {
