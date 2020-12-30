@@ -22,9 +22,7 @@ const Logo = styled.a`
     font-family: "Open Sans", sans-serif;
     
     &:hover {
-      color: #23272d;
-      font-weight: 600;
-      background-color: #33ffa9;
+      border-bottom: 1px solid #33ffa9;
     }
 `
 
