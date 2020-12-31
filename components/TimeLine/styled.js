@@ -30,6 +30,7 @@ export const WorkImage = styled.img`
   width: 100%;
   height: auto;
   display: flex;
+  user-select: none;
   max-width: 1350px;
   border-radius: 6px;
   transition: all .7s;
