@@ -24,7 +24,7 @@ import {
 export default function Preface() {
     const emailLinkAPI = "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=henriquebarrosx@gmail.com";
     const emailSubject = "Topa marcar uma conversa?";
-    
+
     const socialData = [
         // {
         //     label: "Gmail",
@@ -48,7 +48,7 @@ export default function Preface() {
         {
             label: "Github",
             icon: FaGithub,
-            link: "https://github.com/henryxavierb",
+            link: "https://github.com/henriquebarrosx",
         },
     ]
 
