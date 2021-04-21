@@ -17,8 +17,8 @@ function NavBar({ isScreenTop }) {
             link: "#home",
         },
         {
-            label: "Experiences",
-            link: "#experiences",
+            label: "Skills",
+            link: "#skills",
         },
         {
             label: "Projects",

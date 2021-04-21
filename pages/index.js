@@ -3,9 +3,9 @@ import Head from 'next/head'
 import styled from 'styled-components';
 
 import NavBar from '../components/NavBar';
+import Skills from '../components/Skills';
 import SeeMore from '../components/SeeMore';
 import Preface from '../components/Preface';
-import TimeLine from '../components/TimeLine';
 
 const Sections = styled.div`
     width: 100%;
@@ -32,7 +32,7 @@ export default function Home() {
         <NavBar isScreenTop={screenPosition.isScreenTop} />
         <Preface />
         <SeeMore />
-        <TimeLine />
+        <Skills />
       </Sections>
     </React.Fragment>
   )
