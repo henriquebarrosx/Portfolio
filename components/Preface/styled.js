@@ -1,175 +1,112 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
-  width: 95%;
-  display: flex;
+export const Container = styled.div`
+  height: 90vh;
+  display: flex;  
+  padding: 0 140px;
   max-width: 1600px;
-  position: relative;
-  margin: 0 auto 100px;
-  flex-direction: row-reverse;
-  
-  @media (max-width: 1050px) {
-    margin-bottom: 50px;
-    flex-direction: column;
-  }
-  
-  @media(max-width: 750px) {
-    width: 100%;
-  }
-  
-  @media(max-width: 750px) {
-   margin: 0 auto 10px;
-  }
-`
-
-const Photo = styled.img`
-    float: right;
-    height: 60%;
-    display: flex;
-    margin: 0 auto;
-    max-height: 550px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 18px 18px #2a2830;
-    
-    @media (max-width: 1500px) {
-      height: 65vh;
-    }
-    @media (max-width: 1280px) {
-      height: 50vh;
-      margin: 0 auto;
-    }
-    @media (max-width: 1050px) {
-      height: 500px;
-      max-width: 475px;
-      margin: 0 auto 70px;
-    }
-    @media (max-width: 750px) {
-      height: 100vw;
-    }
-`
-
-const PresentationContainer = styled.div`
-  width: 720px;
-  margin: 0 auto;
-  max-width: 720px;
-  
-  @media(max-width: 1250px) {
-     width: 100%;
-     max-width: 520px;
-     margin: 0 auto;
-  }
-`
-
-const Presentation = styled.span`
-  display: flex;
-  max-width: 700px;
-  font-weight: 700;
   flex-direction: column;
-  
-  @media(max-width: 1500px) {
-    margin-top: 0;
-    font-size: 45px;
-    line-height: 60px;
-    letter-spacing: 0;
-  }
-  
-  @media(max-width: 750px) {
-    margin: 0 20px;
-  }
+  align-items: flex-start;
+  justify-content: center;
+`
+export const LeftSide = styled.div`
+  max-width: 700px;
 `
 
-const PresentationTitle = styled.span`
+export const Presentation = styled.span`
+  display: flex;
+  font-weight: 600;
+  flex-direction: column;
+`
+
+export const Name = styled.span`
   width: 100%;
-  color: #33ffa9;
+  height: 90px;
+  color: #47444f;
   font-size: 80px;
-  line-height: 80px;
-  
-  @media(max-width: 1280px) {
-     font-size: 70px;
-  }
-  @media(max-width: 750px) {
-     font-size: 50px;
-  }
-  
-  @media(max-width: 400px) {
-     font-size: 40px;
-  }
 `
 
-const PresentationSubtitle = styled.span`
-  color: #fdfafe;
+export const LastName = styled.span`
+  width: 100%;
+  height: 90px;
+  color: #47444f;
+  font-size: 80px;
+`
+
+export const PresentationSubtitle = styled.span`
+  color: #1d1b24;
   font-size: 36px;
   line-height: 80px;
-  
-  @media(max-width: 750px) {
-     font-size: 25px;
-     line-height: 30px;
-  }
 `
 
-const AboutMe = styled.div`
-  color: #777;
+export const AboutMe = styled.div`
+  color: #666371;
   font-size: 20px;
   margin-top: 20px;
   font-weight: 300;
-  max-width: 900px;
+  max-width: 640px;
   text-align: left;
   line-height: 36px;
   letter-spacing: 0;
   font-style: normal;
   text-decoration: none;
-  
-  @media(max-width: 750px) {
-    font-size: 18px;
-    line-height: 30px;
-    margin: 20px 20px 0;
-  }
 `
 
-const SocialSection = styled.div`
+export const SocialSection = styled.div`
   bottom: 0;
   height: 69px;
   display: flex;
   padding: 15px 0;
-  max-width: 700px;
   margin-top: 55px;
   border-radius: 4px;
   align-items: center;
-  justify-content: flex-end;
-  
-  @media(max-width: 1050px) {
-    justify-content: center;
-  }
-  
-  @media(max-width: 750px) {
-    width: 92%;
-    max-width: none;
-    margin: 30px auto;
+  justify-content: space-between;
+`
+
+export const MatchMe = styled.button`
+  border: none;
+  height: 54px;
+  width: 240px;
+  outline: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background-color: #7562e0;
+
+  &:hover {
+    background-color: #4a37b0
   }
 `
 
-const SocialContainer = styled.ul`
+export const SocialContainer = styled.ul`
   display: flex;
   flex-direction: row;
   list-style-type: none;
 `
 
-const SocialItem = styled.li`
-  height: 69px;
+export const SocialItem = styled.li`
+  width: 60px;
+  height: 60px;
   display: flex;
-  transition: .2s;
+  transition: .3s;
   align-items: center;
+  border-radius: 100%;
   letter-spacing: 1.2px;
-  
-  @media(hover: hover) {
-    ${SocialContainer}:hover > &:not(:hover){
-      opacity: 0.2;
-    }
+  justify-content: center;
+
+  & svg:not(:hover) {
+    color: rgb(132, 130, 138) !important;
   }
-    
+
+  & svg:hover {
+    color: #7562e0 !important;
+  }
+  
   &:not(:last-child) {
-    margin-right: 20px
+    margin-right: 6px
   }
   
   @media(max-width: 750px) {
@@ -179,7 +116,7 @@ const SocialItem = styled.li`
   }
 `
 
-const SocialLink = styled.a`
+export const SocialLink = styled.a`
   font-size: 18px;
   color: #23272d;
   transition: .3s;
@@ -189,23 +126,4 @@ const SocialLink = styled.a`
   text-decoration: none;
   letter-spacing: .5px;
   font-family: "roboto",sans-serif !important;
-  
-  @media(max-width: 750px) {
-     margin: 0 auto;
-     font-size: 14px;
-  }
 `
-
-export {
-  Photo,
-  AboutMe,
-  Container,
-  SocialItem,
-  SocialLink,
-  Presentation,
-  SocialSection,
-  SocialContainer,
-  PresentationTitle,
-  PresentationSubtitle,
-  PresentationContainer,
-}

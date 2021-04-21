@@ -10,7 +10,7 @@ import TimeLine from '../components/TimeLine';
 const Sections = styled.div`
     width: 100%;
     display: flex;
-    padding-top: 130px;
+    margin: 0 auto;
     position: relative;
     flex-direction: column;
    `;
@@ -30,22 +30,22 @@ export default function Home() {
       <Sections id={'home'}>
         <NavBar isScreenTop={screenPosition.isScreenTop} />
         <Preface />
-        <Resume />
+        {/* <Resume /> */}
         <TimeLine />
       </Sections>
     </React.Fragment>
   )
 }
 
-function captureScreenScroll(updateScreenCurrentPosition) {
+export function captureScreenScroll(updateScreenCurrentPosition, position = 1) {
   window.addEventListener('scroll', () => {
-    const SCREEN_TOP_REFERENCE = 1;
-    const isScreenTop = window.scrollY < SCREEN_TOP_REFERENCE;
+    const SCREEN_TOP_REFERENCE = position;
+    const isScreenTop = window.scrollY <= SCREEN_TOP_REFERENCE;
     
     updateScreenCurrentPosition({ isScreenTop })
   })
 }
 
-function removeScreenListener() {
+export function removeScreenListener() {
   window.removeEventListener('scroll', () => {});
 }
