@@ -8,7 +8,7 @@ const Container = styled.div`
   border: none;
   position: fixed;
   transition: all 1s;
-  background-color: ${({ isScreenTop }) => isScreenTop ? '#FFFFFF' : '#DFDDDD'};
+  background-color: ${({ isScreenTop }) => isScreenTop ? '#FFFFFF' : '#eeeeee'};
   `
 
 export const SubContainer = styled.div`

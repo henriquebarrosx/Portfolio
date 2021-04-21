@@ -3,7 +3,7 @@ import Head from 'next/head'
 import styled from 'styled-components';
 
 import NavBar from '../components/NavBar';
-import Resume from '../components/Resume';
+import SeeMore from '../components/SeeMore';
 import Preface from '../components/Preface';
 import TimeLine from '../components/TimeLine';
 
@@ -11,6 +11,7 @@ const Sections = styled.div`
     width: 100%;
     display: flex;
     margin: 0 auto;
+    overflow-x: hidden;
     position: relative;
     flex-direction: column;
    `;
@@ -30,7 +31,7 @@ export default function Home() {
       <Sections id={'home'}>
         <NavBar isScreenTop={screenPosition.isScreenTop} />
         <Preface />
-        {/* <Resume /> */}
+        <SeeMore />
         <TimeLine />
       </Sections>
     </React.Fragment>

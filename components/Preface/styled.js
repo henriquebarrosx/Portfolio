@@ -1,16 +1,27 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  width: 100%;
   height: 90vh;
   display: flex;  
+  margin: 0 auto;
   padding: 0 140px;
   max-width: 1600px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-`
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  `
 export const LeftSide = styled.div`
   max-width: 700px;
+  flex-direction: column;
+`
+
+export const RightSide = styled.div`
+  max-width: 500px;
+  
+  & svg {
+    transform: scale(60vw)
+  }
 `
 
 export const Presentation = styled.span`
@@ -99,10 +110,6 @@ export const SocialItem = styled.li`
 
   & svg:not(:hover) {
     color: rgb(132, 130, 138) !important;
-  }
-
-  & svg:hover {
-    color: #7562e0 !important;
   }
   
   &:not(:last-child) {
