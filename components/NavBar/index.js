@@ -21,7 +21,7 @@ function NavBar({ isScreenTop }) {
             link: "#skills",
         },
         {
-            label: "Projects",
+            label: "Works",
             link: "#projects",
         },
     ];    

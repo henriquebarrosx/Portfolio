@@ -17,7 +17,7 @@ function Tecnologies() {
 		<WorkContainer>			
 			{techs.map(({ label, icon: Icon, color}) => {
 					return (
-						<TechContainer>
+						<TechContainer key={label}>
 							<Icon size={64} color={color} />
 							<TechLabel>{label}</TechLabel>
 						</TechContainer>
