@@ -36,7 +36,7 @@ export default function Preface() {
 				label: "Currículo",
 				icon: FaCloudDownloadAlt,
 				color: '#47444f',
-				link: "https://github.com/henriquebarrosx",
+				link: "https://drive.google.com/file/d/162kzSGfzSlsex27uOQF1CwDPViamVgv3/view?usp=sharing",
 			},
 			{
 				label: "LinkedIn",
