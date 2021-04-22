@@ -8,6 +8,8 @@ import {
 	FaCloudDownloadAlt,
 } from "react-icons/fa";
 
+import { SiGmail } from 'react-icons/si'
+
 import {
 		Name,
 		AboutMe,
@@ -24,18 +26,18 @@ import {
 } from './styled'
 
 export default function Preface() {
-    const emailLinkAPI = "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=henriquebarrosx@gmail.com";
+    const curriculumLink = "https://drive.google.com/file/d/162kzSGfzSlsex27uOQF1CwDPViamVgv3/view?usp=sharing";
 
 		const _match = ()  => {
-			window.open(emailLinkAPI, '_blank')
+			window.open(curriculumLink, '_blank')
 		}
 
 		const socialData = [
 			{
-				label: "Currículo",
-				icon: FaCloudDownloadAlt,
+				label: "Email",
+				icon: SiGmail,
 				color: '#47444f',
-				link: "https://drive.google.com/file/d/162kzSGfzSlsex27uOQF1CwDPViamVgv3/view?usp=sharing",
+				link: "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=henriquebarrosx@gmail.com",
 			},
 			{
 				label: "LinkedIn",
