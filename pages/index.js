@@ -3,14 +3,17 @@ import Head from 'next/head'
 import styled from 'styled-components';
 
 import NavBar from '../components/NavBar';
-import Resume from '../components/Resume';
+import Skills from '../components/Skills';
+import SeeMore from '../components/SeeMore';
 import Preface from '../components/Preface';
-import TimeLine from '../components/TimeLine';
+import Experiences from '../components/Experiences';
 
 const Sections = styled.div`
     width: 100%;
     display: flex;
-    padding-top: 130px;
+    margin: 0 auto;
+    max-width: 1600px;
+    overflow-x: hidden;
     position: relative;
     flex-direction: column;
    `;
@@ -27,25 +30,27 @@ export default function Home() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       
+      <NavBar isScreenTop={screenPosition.isScreenTop} />
+      
       <Sections id={'home'}>
-        <NavBar isScreenTop={screenPosition.isScreenTop} />
         <Preface />
-        <Resume />
-        <TimeLine />
+        <SeeMore />
+        <Skills />
+        <Experiences />
       </Sections>
     </React.Fragment>
   )
 }
 
-function captureScreenScroll(updateScreenCurrentPosition) {
+export function captureScreenScroll(updateScreenCurrentPosition, position = 1) {
   window.addEventListener('scroll', () => {
-    const SCREEN_TOP_REFERENCE = 1;
-    const isScreenTop = window.scrollY < SCREEN_TOP_REFERENCE;
+    const SCREEN_TOP_REFERENCE = position;
+    const isScreenTop = window.scrollY <= SCREEN_TOP_REFERENCE;
     
     updateScreenCurrentPosition({ isScreenTop })
   })
 }
 
-function removeScreenListener() {
+export function removeScreenListener() {
   window.removeEventListener('scroll', () => {});
 }

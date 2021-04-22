@@ -1,10 +1,12 @@
 import React from 'react';
 import { Title, Container } from './styled';
 
-export default function Index({ title }) {
+function TitleComponent({ title }) {
 	return (
 		<Container>
 			<Title>{title}</Title>
 		</Container>
 	)
 }
+
+export default React.memo(TitleComponent)

@@ -1,89 +1,106 @@
 import React from 'react';
 
 import {
-    FaGithub,
-    FaLinkedin,
-    FaInstagram,
-    FaTwitterSquare
+	FaGithub,
+	FaLinkedin,
+	FaInstagram,
+	FaTwitterSquare,
+	FaCloudDownloadAlt,
 } from "react-icons/fa";
 
 import {
-    Photo,
-    AboutMe,
-    Container,
+		Name,
+		AboutMe,
+		MatchMe,
+		LeftSide,
+		LastName,
+		Container,
+		RightSide,
     SocialItem,
     SocialLink,
     Presentation,
     SocialSection,
     SocialContainer,
-    PresentationTitle,
-    PresentationSubtitle,
-    PresentationContainer,
 } from './styled'
 
 export default function Preface() {
     const emailLinkAPI = "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=henriquebarrosx@gmail.com";
-    const emailSubject = "Topa marcar uma conversa?";
 
-    const socialData = [
-        // {
-        //     label: "Gmail",
-        //     link: `${emailLinkAPI}&su=${emailSubject}`
-        // },
-        {
-            label: "LinkedIn",
-            icon: FaLinkedin,
-            link: "https://www.linkedin.com/in/henrique-barros-xavier-706a04178"
-        },
-        {
-            label: "Twitter",
-            icon: FaTwitterSquare,
-            link: "https://twitter.com/Henry_bhx"
-        },
-        {
-            label: "Instagram",
-            icon: FaInstagram,
-            link: "https://www.instagram.com/bh_xavier"
-        },
-        {
-            label: "Github",
-            icon: FaGithub,
-            link: "https://github.com/henriquebarrosx",
-        },
-    ]
+		const _match = ()  => {
+			window.open(emailLinkAPI, '_blank')
+		}
 
-    return (
-        <React.Fragment>
-            <Container>
-                <Photo src={"/photo.jpg"} alt={"profile"} draggable={false} />
+		const socialData = [
+			{
+				label: "Currículo",
+				icon: FaCloudDownloadAlt,
+				color: '#47444f',
+				link: "https://drive.google.com/file/d/162kzSGfzSlsex27uOQF1CwDPViamVgv3/view?usp=sharing",
+			},
+			{
+				label: "LinkedIn",
+				icon: FaLinkedin,
+				color: '#0077B5',
+				link: "https://www.linkedin.com/in/henrique-barros-xavier-706a04178"
+		},
+		{
+				label: "Twitter",
+				icon: FaTwitterSquare,
+				color: '#55acee',
+				link: "https://twitter.com/Henry_bhx"
+		},
+		{
+				label: "Instagram",
+				icon: FaInstagram,
+				color: ' #e4405f',
+				link: "https://www.instagram.com/bh_xavier"
+		},
+		{
+				label: "Github",
+				icon: FaGithub,
+				color: '#47444f',
+				link: "https://github.com/henriquebarrosx",
+		},
+    ];
 
-                <PresentationContainer>
-                    <Presentation>
-                        <PresentationTitle>I'm Henrique</PresentationTitle>
-                        <PresentationSubtitle>A Web Developer</PresentationSubtitle>
-                    </Presentation>
+		const thumbnail = '/undraw_version_control_9bpv 1.png';
 
-                    <AboutMe>
-                        "Programmer with a strong desire to stand out through technology,
-                        investing time and applying all possible knowledge. This is what I look
-                        for when I'm participating in a project or software maintenance, constantly
-                        looking for improvements in the processes and techniques applied in a way that
-                        simplifies and improve people's daily lives."
-                    </AboutMe>
+		return (
+			<React.Fragment>
+				<Container>
+					<LeftSide>
+						<Presentation>
+							<Name>Henrique</Name>
+							<LastName>Barros</LastName>
+						</Presentation>
 
-                    <SocialSection>
-                        <SocialContainer>
-                            {socialData.map(({ label, link, icon: Icon }) => (
-                                <SocialItem key={label}>
-                                    <SocialLink as={"a"} href={link} target={"_blank"}>
-                                        <Icon size={42} color={'#fdfafe'} />
-                                    </SocialLink>
-                                </SocialItem>
-                            ))}
-                        </SocialContainer>
-                    </SocialSection>
-                </PresentationContainer>
-            </Container>
-        </React.Fragment>
-    )
+						<AboutMe>
+							Programmer passionate about obtaining new experiences and with a 
+							great desire to simplify and improve people's daily lives through 
+							technology.
+						</AboutMe>
+
+						<SocialSection>
+							<MatchMe type="button" onClick={_match}>
+								Match me!
+							</MatchMe>
+
+							<SocialContainer>
+								{socialData.map(({ label, link, color, icon: Icon }) => (
+									<SocialItem key={label}>
+										<SocialLink as={"a"} href={link} target={"_blank"} title={label}>
+											<Icon size={42} color={color} />
+										</SocialLink>
+									</SocialItem>
+								))}
+							</SocialContainer>
+						</SocialSection>
+					</LeftSide>
+
+					<RightSide>
+						<img src={thumbnail} alt={'experiences'} />
+					</RightSide>
+				</Container>
+			</React.Fragment>
+	)
 }

@@ -5,12 +5,12 @@ export const Container = styled.div`
 `
 
 export const Title = styled.h1`
-	color: #2a2830;
-	font-size: 11vw;
+	color: #47444f;
+	font-size: 70px;
 	margin: 20px auto;
 	text-align: center;
 	
 	@media(max-width: 750px) {
-		font-size: 13vw;
+		font-size: 10vw;
 	}
 `
