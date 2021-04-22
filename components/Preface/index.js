@@ -1,5 +1,4 @@
 import React from 'react';
-import Thubnail from '../../public/undraw_version_control_9bpv.svg';
 
 import {
 	FaGithub,
@@ -62,7 +61,9 @@ export default function Preface() {
 				color: '#47444f',
 				link: "https://github.com/henriquebarrosx",
 		},
-    ]
+    ];
+
+		const thumbnail = '/undraw_version_control_9bpv 1.png';
 
 		return (
 			<React.Fragment>
@@ -97,7 +98,7 @@ export default function Preface() {
 					</LeftSide>
 
 					<RightSide>
-						<Thubnail />
+						<img src={thumbnail} alt={'experiences'} />
 					</RightSide>
 				</Container>
 			</React.Fragment>

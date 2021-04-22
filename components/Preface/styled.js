@@ -10,7 +10,13 @@ export const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  `
+
+  @media(max-width: 1150px) {
+    height: unset;
+    margin: 100px 0;
+    flex-direction: column;
+  }
+`
 export const LeftSide = styled.div`
   max-width: 700px;
   flex-direction: column;
@@ -18,9 +24,27 @@ export const LeftSide = styled.div`
 
 export const RightSide = styled.div`
   max-width: 500px;
-  
-  & svg {
-    transform: scale(60vw)
+
+  & img {
+    height: auto;
+    width: 1000px;
+  }
+
+  @media(max-width: 1150px) {
+    max-width: unset;
+    margin-top: 100px;
+    flex-direction: column;
+
+    & img {
+      height: auto;
+      width: 700px;
+    }
+  }
+
+  @media(max-width: 750px) {
+    & img {
+      width: 80vw !important;
+    }
   }
 `
 
@@ -28,6 +52,18 @@ export const Presentation = styled.span`
   display: flex;
   font-weight: 600;
   flex-direction: column;
+
+  @media(max-width: 1150px) {
+    & {
+      flex-direction: row;
+    }
+  }
+
+  @media(max-width: 750px) {
+    & {
+      flex-direction: column;
+    }
+  }
 `
 
 export const Name = styled.span`
@@ -35,6 +71,14 @@ export const Name = styled.span`
   height: 90px;
   color: #47444f;
   font-size: 80px;
+
+  @media(max-width: 1150px) {
+    & {
+      width: 80%;
+      height: 75px;
+      font-size: 60px;
+    }
+  }
 `
 
 export const LastName = styled.span`
@@ -42,6 +86,17 @@ export const LastName = styled.span`
   height: 90px;
   color: #47444f;
   font-size: 80px;
+
+  @media(max-width: 1150px) {
+    & {
+      height: 75px;
+      font-size: 60px;
+    }
+  }
+
+  @media(max-width: 750px) {
+    margin-left: 10%;
+  }
 `
 
 export const PresentationSubtitle = styled.span`
@@ -61,6 +116,12 @@ export const AboutMe = styled.div`
   letter-spacing: 0;
   font-style: normal;
   text-decoration: none;
+
+  @media(max-width: 1150px) {
+    & {
+      font-size: 18px;
+    }
+  }
 `
 
 export const SocialSection = styled.div`
@@ -72,6 +133,15 @@ export const SocialSection = styled.div`
   border-radius: 4px;
   align-items: center;
   justify-content: space-between;
+
+  @media(max-width: 750px) {
+    height: unset;
+    flex-direction: column;
+
+    & button {
+      margin-bottom: 40px;
+    }
+  }
 `
 
 export const MatchMe = styled.button`
