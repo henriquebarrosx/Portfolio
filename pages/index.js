@@ -6,11 +6,13 @@ import NavBar from '../components/NavBar';
 import Skills from '../components/Skills';
 import SeeMore from '../components/SeeMore';
 import Preface from '../components/Preface';
+import Experiences from '../components/Experiences';
 
 const Sections = styled.div`
     width: 100%;
     display: flex;
     margin: 0 auto;
+    max-width: 1600px;
     overflow-x: hidden;
     position: relative;
     flex-direction: column;
@@ -28,11 +30,13 @@ export default function Home() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       
+      <NavBar isScreenTop={screenPosition.isScreenTop} />
+      
       <Sections id={'home'}>
-        <NavBar isScreenTop={screenPosition.isScreenTop} />
         <Preface />
         <SeeMore />
         <Skills />
+        <Experiences />
       </Sections>
     </React.Fragment>
   )

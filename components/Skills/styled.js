@@ -3,9 +3,9 @@ import { FaChevronRight, FaChevronLeft } from 'react-icons/fa'
 
 export const Container = styled.div`
   display: flex;
-	margin: 84px 0;
   border-radius: 6px;
   align-items: center;
+	margin: 84px 0 220px;
   flex-direction: column;
   justify-content: center;
 `

@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 90vh;
   display: flex;  
   margin: 0 auto;
-  padding: 0 140px;
+  padding: 0 40px;
   max-width: 1600px;
   flex-direction: row;
   align-items: center;
@@ -107,6 +107,11 @@ export const SocialItem = styled.li`
   border-radius: 100%;
   letter-spacing: 1.2px;
   justify-content: center;
+
+
+  & svg {
+    transition: all 0.5s;
+  }
 
   & svg:not(:hover) {
     color: rgb(132, 130, 138) !important;
