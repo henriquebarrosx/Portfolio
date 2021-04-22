@@ -1,7 +1,9 @@
 import React from 'react';
+import {HiMenuAlt3} from 'react-icons/hi'
 
 import {
     Logo,
+    MenuIcon,
     Container,
     NavBarLink,
     SubContainer,
@@ -27,21 +29,28 @@ function NavBar({ isScreenTop }) {
     ];    
 
     const [displayName, setDisplayName] = React.useState(false);
+    const [displayMenu, setDisplayMenu] = React.useState(false);
 
     React.useEffect(() => captureScreenScroll(setDisplayName), []);
     React.useEffect(() => removeScreenListener(), [displayName]);
+
+    const _changeMenuBehavior = () =>  setDisplayMenu(!displayMenu)
     
     return (
       <React.Fragment>
-        <Container isScreenTop={isScreenTop}>
+        <Container isScreenTop={isScreenTop} displayMenu={displayMenu}>
           <SubContainer displayName={displayName}>
-            <LogoContainer displayName={displayName}>
-              <Logo>Henrique Barros</Logo>
+            <LogoContainer>
+              <Logo displayName={displayName}>Henrique Barros</Logo>
+
+              <MenuIcon displayMenu={displayMenu} onClick={_changeMenuBehavior}>
+                <HiMenuAlt3 size={24} />
+              </MenuIcon>
             </LogoContainer>
               
-            <NavBarLinksContainer>
+            <NavBarLinksContainer displayMenu={displayMenu}>
               {menuOptions.map(({ label, link }) => (
-                <NavbarLinkItem key={label}>
+                <NavbarLinkItem key={label} onClick={_changeMenuBehavior}>
                   <NavBarLink as="a" href={link}>{label}</NavBarLink>
                 </NavbarLinkItem>
               ))}

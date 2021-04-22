@@ -1,20 +1,30 @@
-import styled  from 'styled-components';
+import styled, {keyframes}  from 'styled-components';
 
 const Container = styled.div`
   top: 0;
   z-index: 10;
   width: 100%;
-  height: 70px;
   border: none;
+  height: 70px;
   position: fixed;
   transition: all 1s;
-  background-color: ${({ isScreenTop }) => isScreenTop ? '#FFFFFF' : '#eeeeee'};
-  `
+  background-color: ${({ isScreenTop }) => isScreenTop ? '#FFFFFF' : '#f2f0fc'};
+
+  @media(max-width: 750px) {
+    transition: all 0.1s;
+    height: ${({displayMenu}) => displayMenu ? '230px' : '70px'};
+    background-color: ${({ displayMenu, isScreenTop }) => displayMenu || !isScreenTop ? '#f2f0fc' : '#FFFFFF'};
+  }
+`
 
 export const SubContainer = styled.div`
   display: flex;
   transition: 3s;
   justify-content: space-between;
+
+  @media(max-width: 750px) {
+    flex-direction: column;
+  }
 `
 
 const Logo = styled.span`
@@ -26,7 +36,16 @@ const Logo = styled.span`
   transition: all .3s;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
-  `
+  opacity: ${({ displayName }) => displayName ? '1' : '0'};
+`
+
+export const MenuIcon = styled.div`
+  display: none;
+
+  @media(max-width: 750px) {
+    display: flex;
+  }
+`
 
 const LogoContainer = styled.div`
   height: 70px;
@@ -35,7 +54,15 @@ const LogoContainer = styled.div`
   transition: 1s;
   margin: 0 25px;
   align-items: center;
-  opacity: ${({ displayName }) => displayName ? '1' : '0'};
+
+  @media(max-width: 750px) {
+    justify-content: space-between;
+  }
+`
+
+const EasyIn = keyframes`
+  0% { opacity: 0 }
+  100% { opacity: 1 }
 `
 
 const NavBarLinksContainer = styled.ul`
@@ -43,8 +70,17 @@ const NavBarLinksContainer = styled.ul`
     float: right;
     display: flex;
     margin: 0 35px;
+    transition: 2s;
     align-items: center;
     justify-content: flex-end;
+
+    @media(max-width: 750px) {
+      margin-top: 60px;
+      animation: EasyIn;
+      animation-delay: 5s;
+      flex-direction: column;
+      display: ${({displayMenu}) => displayMenu ? 'flex' : 'none'};
+    }
 `
 
 const NavBarLink = styled.a`
