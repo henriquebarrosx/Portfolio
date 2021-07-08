@@ -43,7 +43,7 @@ export default function Preface() {
 			label: "LinkedIn",
 			icon: FaLinkedin,
 			color: '#0077B5',
-			link: "https://www.linkedin.com/in/henrique-barros-xavier-706a04178"
+			link: "https://www.linkedin.com/in/henriquebarrosx/"
 		},
 		{
 			label: "Twitter",
