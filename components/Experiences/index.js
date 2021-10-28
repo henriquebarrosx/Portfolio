@@ -28,7 +28,7 @@ function LeftSide() {
   return (
     <LeftSideStyle>
       <TextContainer>
-        <h1>1.5+</h1>
+        <h1>2+</h1>
         <div>
           <h2>Years</h2>
           <h2>Experiences</h2>
@@ -43,15 +43,15 @@ function RightSide() {
   const images = [
     {
       thumbnail: '/undraw_Working_oh83 1.png',
-      description: 'Web Developer',
+      description: 'Frontend Web Developer',
+    },
+    {
+      thumbnail: '/undraw_server_cluster_jwwq 1.png',
+      description: 'Backend Web Developer',
     },
     {
       thumbnail: '/undraw_Mobile_apps_re_3wjf 1.png',
       description: 'Mobile Developer',
-    },
-    {
-      thumbnail: '/undraw_server_cluster_jwwq 1.png',
-      description: 'Backend Developer',
     },
     {
       thumbnail: '/undraw_design_components_9vy6 1.png',
