@@ -134,4 +134,5 @@ export const CardImgContainer = styled.div`
 export const CardImgDescription = styled.h1`
   color: #453E62;
   font-size: 24px;
+  text-align: center;
 `
