@@ -49,7 +49,7 @@ export default function Preface() {
 			label: "Twitter",
 			icon: FaTwitterSquare,
 			color: '#55acee',
-			link: "https://twitter.com/henriquebx_"
+			link: "https://twitter.com/henriquebx__"
 		},
 		{
 			label: "Instagram",
