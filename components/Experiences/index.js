@@ -28,7 +28,7 @@ function LeftSide() {
   return (
     <LeftSideStyle>
       <TextContainer>
-        <h1>5+</h1>
+        <h1>4+</h1>
         <div>
           <h2>Years</h2>
           <h2>Experiences</h2>
