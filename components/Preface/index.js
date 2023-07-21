@@ -84,7 +84,7 @@ export default function Preface() {
 
 					<SocialSection>
 						<MatchMe type="button" onClick={_match}>
-							Match me!
+							Currículo
 						</MatchMe>
 
 						<SocialContainer>
