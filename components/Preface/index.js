@@ -26,7 +26,7 @@ import {
 } from './styled'
 
 export default function Preface() {
-	const curriculumLink = "https://drive.google.com/file/d/1lCoRAv7GS7LyKDBUlcPKzTxtfu_JZaj2/view?usp=sharing";
+	const curriculumLink = "https://docs.google.com/document/d/1_T7PpNM9bL0XgfUE6N758P9OLSJvKpUNX1HlLsZdlwI/edit?usp=sharing";
 
 	const _match = () => {
 		window.open(curriculumLink, '_blank')
