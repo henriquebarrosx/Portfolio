@@ -141,9 +141,10 @@ const Portfolio: FC = () => {
                     alt="hero-bg"
                     className="absolute inset-0 w-full h-full object-cover grayscale brightness-50 blur-2xl"
                 />
+
                 <div className="relative z-10 text-center px-6">
                     <motion.h1
-                        className="text-5xl md:text-7xl font-extrabold text-white leading-tight max-w-4xl mx-auto"
+                        className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight max-w-4xl mx-auto"
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.2, delay: 0.2 }}
@@ -151,12 +152,12 @@ const Portfolio: FC = () => {
                         Henrique Barros
                     </motion.h1>
 
-                    <span className="text-white typing text-xl md:text-2xl font-mono inline-block">
+                    <span className="text-white typing text-base md:text-2xl font-mono inline-block">
                         Desenvolvedor de software
                     </span>
 
                     <motion.div
-                        className="mt-6 flex items-center justify-center gap-4 text-white"
+                        className="mt-4 md:mt-6 flex items-center justify-center gap-4 text-white"
                         variants={container}
                         initial="hidden"
                         animate="visible"
@@ -171,7 +172,7 @@ const Portfolio: FC = () => {
                     </motion.div>
 
                     <motion.div
-                        className="flex justify-center mt-8"
+                        className="flex justify-center mt-4 md:mt-8"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: 0.4 }}
