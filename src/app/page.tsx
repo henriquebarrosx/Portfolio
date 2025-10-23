@@ -64,7 +64,7 @@ const Portfolio: FC = () => {
         },
         {
             cargo: "Desenvolvedor Frontend Sênior",
-            empresa: "Assurance IT (Clientes: IBM e MRS)",
+            empresa: "Assurance IT (Cliente: IBM)",
             periodo: "Maio 2022 - Julho 2023",
             descricao: "Gestão de backlog e atividades com Jira; aplicação de práticas ágeis com Kanban e Scrum; desenvolvimento com React; testes unitários e de integração com Jest + Testing Library; conteinerização com Docker/Docker Compose; automação de pipelines CI/CD com Jenkins; versionamento com GitLab; monitoramento de qualidade com SonarQube."
         },
@@ -95,24 +95,28 @@ const Portfolio: FC = () => {
         },
         {
             categoria: "Backend Development",
-            tecnologias: ["Spring Boot", "Node.js", "Ruby on Rails"]
+            tecnologias: ["Java - Spring Boot", "Node.js", "Ruby on Rails"]
         },
         {
-            categoria: "Testes",
+            categoria: "Testes Automatizados",
             tecnologias: ["Jest", "Karma", "JUnit", "Mockito"]
         },
         {
             categoria: "DevOps / Infra",
-            tecnologias: ["Github Actions", "Docker", "Redis", "Jenkins", "Nginx"]
+            tecnologias: ["Github Actions", "Docker", "Jenkins", "Nginx"]
         },
         {
             categoria: "Banco de Dados",
             tecnologias: ["PostgreSQL", "SQLite", "H2"]
         },
         {
+            categoria: "Metodologias Ágeis",
+            tecnologias: ["Scrum", "Kanban"]
+        },
+        {
             categoria: "Outros",
-            tecnologias: ["RabbitMQ", "CI/CD", "Scrum", "Kanban"]
-        }
+            tecnologias: ["Mensageria - RabbitMQ", "Redis"]
+        },
     ];
 
     const container = {
@@ -127,7 +131,6 @@ const Portfolio: FC = () => {
 
     return (
         <div className="font-sans">
-
             {/* HERO */}
             <section
                 id="hero"
@@ -225,6 +228,42 @@ const Portfolio: FC = () => {
                 </div>
             </motion.section>
 
+            {/* EDUCATION */}
+            <motion.section
+                id="education"
+                className="max-w-5xl mx-auto px-6 flex gap-12 my-24 items-start"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={container}
+            >
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-y-4 py-8 first:pt-0 last:pb-0 w-full">
+                    <motion.div className="flex justify-center md:justify-start" variants={item}>
+                        <div className="relative h-max">
+                            <h2 className="text-xl font-bold uppercase text-neutral-800">Formação</h2>
+                            <span className="absolute inset-x-0 -bottom-1 border-b-2 border-orange-400"></span>
+                        </div>
+                    </motion.div>
+
+                    <motion.div className="col-span-1 md:col-span-3 flex flex-col" variants={container}>
+                        <motion.div
+                            className="flex flex-col pb-8 last:pb-0 text-justify md:text-left"
+                            variants={item}
+                        >
+                            <div className="flex flex-col pb-4">
+                                <h2 className="text-xl font-bold text-left">Análise e Desenvolvimento de Sistemas</h2>
+                                <span className="flex-1 text-sm font-medium italic sm:flex-none">Centro Universitário Mario Pontes Jucá - UMJ</span>
+                                <span className="flex-1 text-sm sm:flex-none">Março 2017 - Dezembro 2022</span>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                </div>
+            </motion.section>
+
+            <section className="max-w-5xl mx-auto px-6">
+                <hr />
+            </section>
+
             {/* WORK */}
             <motion.section
                 id="work"
@@ -273,14 +312,22 @@ const Portfolio: FC = () => {
                 variants={container}
             >
                 <div className="max-w-5xl mx-auto px-6">
-                    <h3 className="text-lg font-bold mb-8">SKILLS</h3>
+                    <h3 className="text-lg font-bold mb-8">Competências</h3>
+
                     <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" variants={container}>
                         {skills.map((skill, idx) => (
                             <motion.div key={idx} className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition" variants={item}>
-                                <h5 className="text-center mb-4 font-semibold text-lg">{skill.categoria}</h5>
+                                <h5 className="text-center mb-4 font-semibold text-lg">
+                                    {skill.categoria}
+                                </h5>
+
                                 <div className="flex flex-wrap gap-2 justify-center">
-                                    {skill.tecnologias.map((tech, i) => (
-                                        <span key={i} className="bg-orange-100 text-orange-800 text-sm font-medium px-3 py-1 rounded-full">{tech}</span>
+                                    {skill.tecnologias.map((tech) => (
+                                        <span
+                                            key={tech}
+                                            className="bg-orange-100 text-orange-800 text-sm font-medium px-3 py-1 rounded-full">
+                                            {tech}
+                                        </span>
                                     ))}
                                 </div>
                             </motion.div>
@@ -307,6 +354,7 @@ const Portfolio: FC = () => {
                             </motion.div>
                         ))}
                     </motion.div>
+
                     <motion.span className="text-sm text-neutral-700" variants={item}>
                         Henrique Barros
                     </motion.span>
