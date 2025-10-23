@@ -12,3 +12,50 @@
 	backdrop-filter: blur(6px);
 	-webkit-backdrop-filter: blur(6px);
 }
+
+.typing {
+	overflow: hidden;
+	white-space: nowrap;
+
+	width: 0;
+	opacity: 0;
+
+	border-right: 2px solid white;
+	/* cursor presente desde o início */
+	border-color: transparent;
+	/* mas invisível inicialmente */
+
+	animation:
+		fadeIn 0.5s forwards,
+		typing 2s steps(27) forwards 0.5s,
+		blink 0.7s step-end infinite 2.5s;
+	/* blink começa após typing */
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+		border-color: white;
+	}
+
+	to {
+		width: 27ch;
+		border-color: white;
+	}
+}
+
+@keyframes blink {
+	50% {
+		border-color: transparent;
+	}
+}

@@ -126,7 +126,7 @@ const Portfolio: FC = () => {
 
     const item = {
         hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+        visible: { opacity: 1, y: 0, transition: { duration: 1 } }
     };
 
     return (
@@ -150,6 +150,10 @@ const Portfolio: FC = () => {
                     >
                         Henrique Barros
                     </motion.h1>
+
+                    <span className="text-white typing text-xl md:text-2xl font-mono inline-block">
+                        Desenvolvedor de software
+                    </span>
 
                     <motion.div
                         className="mt-6 flex items-center justify-center gap-4 text-white"
@@ -199,7 +203,7 @@ const Portfolio: FC = () => {
                 className="bg-[#222222] text-white py-32"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ amount: 0.2 }}
                 variants={container}
             >
                 <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row gap-12 items-center md:items-start">
@@ -308,15 +312,15 @@ const Portfolio: FC = () => {
                 className="bg-[#f5f5f6] py-24"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ amount: 0.2 }}
                 variants={container}
             >
                 <div className="max-w-5xl mx-auto px-6">
                     <h3 className="text-lg font-bold mb-8">Competências</h3>
 
-                    <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" variants={container}>
+                    <motion.div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" variants={item}>
                         {skills.map((skill, idx) => (
-                            <motion.div key={idx} className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition" variants={item}>
+                            <div key={idx} className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition" >
                                 <h5 className="text-center mb-4 font-semibold text-lg">
                                     {skill.categoria}
                                 </h5>
@@ -330,7 +334,7 @@ const Portfolio: FC = () => {
                                         </span>
                                     ))}
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </motion.div>
                 </div>
@@ -341,7 +345,7 @@ const Portfolio: FC = () => {
                 className="relative bg-neutral-900 px-4 pb-6 pt-12 sm:px-8 sm:pt-14 sm:pb-8"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ amount: 0.2 }}
                 variants={container}
             >
                 <motion.div className="flex flex-col items-center gap-y-4 py-20" variants={container}>
