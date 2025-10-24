@@ -196,6 +196,26 @@ const Portfolio: FC = () => {
                         </a>
                     </motion.div>
                 </div>
+
+                {/* Scroll to top button */}
+                <div className="absolute inset-x-0 bottom-4 flex justify-center sm:bottom-6">
+                    <a
+                        href="#about"
+                        className="rounded-full bg-neutral-100 p-1 ring-white ring-offset-2 ring-offset-gray-700/80 focus:outline-none focus:ring-2 sm:p-2"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={2}
+                            stroke="currentColor"
+                            aria-hidden="true"
+                            className="h-6 w-6 bg-transparent sm:h-8 sm:w-8"
+                        >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                </div>
             </section>
 
             {/* ABOUT */}
@@ -342,29 +362,43 @@ const Portfolio: FC = () => {
             </motion.section>
 
             {/* FOOTER */}
-            <motion.section
-                className="relative bg-neutral-900 px-4 pb-6 pt-12 sm:px-8 sm:pt-14 sm:pb-8"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.2 }}
-                variants={container}
-            >
-                <motion.div className="flex flex-col items-center gap-y-4 py-20" variants={container}>
-                    <motion.div className="flex gap-x-4 text-neutral-500" variants={container}>
+            <section className="relative bg-neutral-900 px-4 pb-6 pt-12 sm:px-8 sm:pt-14 sm:pb-8">
+                {/* Scroll to top button */}
+                <div className="absolute inset-x-0 -top-4 flex justify-center sm:-top-6">
+                    <a
+                        href="#hero"
+                        className="rounded-full bg-neutral-100 p-1 ring-white ring-offset-2 ring-offset-gray-700/80 focus:outline-none focus:ring-2 sm:p-2"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={2}
+                            stroke="currentColor"
+                            aria-hidden="true"
+                            className="h-6 w-6 bg-transparent sm:h-8 sm:w-8"
+                        >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div className="flex flex-col items-center gap-y-4 py-20" >
+                    <div className="flex gap-x-4 text-neutral-500">
                         {socialData.map(({ label, link, icon: Icon }) => (
-                            <motion.div key={label} variants={item}>
+                            <div key={label}>
                                 <SocialIcon link={link} label={label}>
                                     <Icon size={42} className="text-neutral-500" />
                                 </SocialIcon>
-                            </motion.div>
+                            </div>
                         ))}
-                    </motion.div>
+                    </div>
 
-                    <motion.span className="text-sm text-neutral-700" variants={item}>
+                    <span className="text-sm text-neutral-700">
                         Henrique Barros
-                    </motion.span>
-                </motion.div>
-            </motion.section>
+                    </span>
+                </div>
+            </section>
 
         </div>
     );
