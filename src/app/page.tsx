@@ -153,7 +153,7 @@ const Portfolio: FC = () => {
                     </motion.h1>
 
                     <span className="text-white typing text-base md:text-2xl font-mono inline-block">
-                        Desenvolvedor de software
+                        Desenvolvedor de Software
                     </span>
 
                     <motion.div
