@@ -42,12 +42,6 @@ const Portfolio: FC = () => {
             link: "https://www.linkedin.com/in/henriquebarrosx/"
         },
         {
-            label: "Instagram",
-            icon: FaInstagram,
-            color: ' #e4405f',
-            link: "https://www.instagram.com/bh_xavier"
-        },
-        {
             label: "Github",
             icon: FaGithub,
             color: '#47444f',
@@ -58,33 +52,27 @@ const Portfolio: FC = () => {
     const experiences = [
         {
             cargo: "Desenvolvedor Frontend Sênior",
-            empresa: "Cast Group (Cliente: Banco do Brasil)",
-            periodo: "Novembro 2023 - Atual",
-            descricao: "Gestão de backlog e atividades com Genti e BusinessMap; aplicação de práticas ágeis com Kanban e Scrum; desenvolvimento com React (fase inicial) e Angular (fase atual); testes unitários e de integração com Jest + Testing Library e Karma + Jasmine; conteinerização com Docker/Docker Compose e orquestração com Kubernetes/OpenShift; automação de pipelines CI/CD com Jenkins; versionamento com GitLab; monitoramento de qualidade com SonarQube; configuração de Nginx."
+            empresa: "Cast Informática S.A. · São Paulo, SP",
+            periodo: "09/2023 - atualmente",
+            descricao: "Atuei no desenvolvimento de aplicações web com TypeScript, Angular (v14, v16 e v18) + RxJS e React.js (v18), implementando testes unitários e de integração com Karma, Jasmine, Jest e Testing Library para garantir qualidade e prevenção de regressões. Trabalhei com bibliotecas de componentes e Tailwind CSS para padronização visual e consistência de design system entre equipes, além de monitorar pipelines CI/CD com Jenkins e GitHub Actions nos ambientes de desenvolvimento, homologação e produção. Mantive a qualidade do código via SonarQube, identificando bugs, code smells e duplicidades, e conduzi análise estática de segurança com Checkmarx. Configurei Nginx como proxy reverso para roteamento de requisições e gerenciei o backlog com BusinessMap, seguindo rituais de Scrum e Kanban. Atuei ativamente em code reviews via GitLab e GitHub, contribuindo para a evolução técnica do time."
         },
         {
             cargo: "Desenvolvedor Frontend Sênior",
-            empresa: "Assurance IT (Cliente: IBM)",
-            periodo: "Maio 2022 - Julho 2023",
-            descricao: "Gestão de backlog e atividades com Jira; aplicação de práticas ágeis com Kanban e Scrum; desenvolvimento com React; testes unitários e de integração com Jest + Testing Library; conteinerização com Docker/Docker Compose; automação de pipelines CI/CD com Jenkins; versionamento com GitLab; monitoramento de qualidade com SonarQube."
+            empresa: "Assurance Consultoria em Tecnologia da Informacao LTDA · São Paulo, SP",
+            periodo: "05/2022 - 07/2023",
+            descricao: "Atuei no desenvolvimento de funcionalidades e melhorias em aplicações web com JavaScript, TypeScript e React.js, implementando testes unitários e de integração com Jest e Testing Library para garantir qualidade e prevenção de regressões. Compus interfaces com Material UI e Tailwind CSS, assegurando padronização visual e consistência de design system. Monitorei pipelines CI/CD com Jenkins nos ambientes de desenvolvimento, homologação e produção, e mantive a qualidade do código via SonarQube, identificando code smells, duplicidades e vulnerabilidades. Gerenciei o backlog com Jira, seguindo rituais de Scrum e Kanban, e conduzi code reviews via GitLab, contribuindo para a evolução técnica do time."
         },
         {
             cargo: "Desenvolvedor Full Stack Pleno",
-            empresa: "Intensivet",
-            periodo: "Janeiro 2021 - Maio 2022",
-            descricao: "Desenvolvimento de aplicação 24h para veterinários com Ruby on Rails e Vue.js; desenvolvimento de aplicativos de chat em tempo real com React Native; desenvolvimento guiado por testes com Jest; gestão de projetos com Scrum e Kanban; versionamento com Git; conteinerização com Docker/Docker Compose."
+            empresa: "Intensivet Atividades Veterinarias LTDA · Brasília, DF",
+            periodo: "01/2021 - 05/2022",
+            descricao: "Atuei no desenvolvimento de funcionalidades e correção de bugs com JavaScript, TypeScript, Angular, React.js, Next.js, Express e Node.js e Ruby on Rails, com interfaces compostas em Material UI para padronização visual e consistência de design system. Gerenciei o backlog com Trello, seguindo rituais de Scrum e Kanban, e conduzi code reviews via GitHub, contribuindo para a evolução técnica do time."
         },
         {
-            cargo: "Desenvolvedor Full Stack Pleno",
-            empresa: "SoftWrap",
-            periodo: "Agosto 2020 - Janeiro 2021",
-            descricao: "Desenvolvimento de aplicações com TypeScript (React); integração de APIs do Facebook e Instagram; desenvolvimento e sustentação de sistemas em Angular.js e Ruby on Rails; conteinerização com Docker/Docker Compose; versionamento com Git."
-        },
-        {
-            cargo: "Desenvolvedor Frontend Junior",
-            empresa: "Sua Formatura",
-            periodo: "Setembro 2019 - Abril 2020",
-            descricao: "Gestão de fluxo e práticas ágeis com Scrum; desenvolvimento de aplicações de gestão de formaturas com JavaScript (React e Redux); conteinerização com Docker/Docker Compose; versionamento com Git; replicação de protótipos via Figma."
+            cargo: "Desenvolvedor Frontend Júnior",
+            empresa: "Sua Formatura Pagamentos LTDA · Maceió, AL",
+            periodo: "09/2019 - 04/2020",
+            descricao: "Atuei no desenvolvimento de funcionalidades e correção de bugs com JavaScript, TypeScript e React.js, utilizando Redux para gerenciamento de estado global, e compus interfaces com Material UI assegurando padronização visual e consistência de design system. Gerenciei o backlog com Jira, seguindo rituais de Scrum e Kanban, e conduzi code reviews via GitHub, contribuindo para a evolução técnica do time."
         }
     ];
 
@@ -95,7 +83,7 @@ const Portfolio: FC = () => {
         },
         {
             categoria: "Backend Development",
-            tecnologias: ["Java - Spring Boot", "Node.js", "Ruby on Rails"]
+            tecnologias: ["Java - Spring Boot", "Node.js"]
         },
         {
             categoria: "Testes Automatizados",
@@ -103,7 +91,7 @@ const Portfolio: FC = () => {
         },
         {
             categoria: "DevOps / Infra",
-            tecnologias: ["Github Actions", "Docker", "Jenkins", "Nginx"]
+            tecnologias: ["Github Actions", "Docker", "Jenkins", "Nginx", "SonarQube"]
         },
         {
             categoria: "Banco de Dados",
@@ -238,16 +226,9 @@ const Portfolio: FC = () => {
                     </motion.div>
                     <motion.div className="col-span-10 flex flex-col gap-4 text-base text-white/80 leading-relaxed max-w-3xl" variants={item}>
                         <h2 className="text-2xl font-bold mb-3">Sobre</h2>
+                        
                         <p>
-                            Desenvolvedor de Software com mais de 5 anos de experiência, graduado pelo Centro Universitário Mario Pontes Jucá - UMJ (2022). Tenho atuado no desenvolvimento de aplicações web robustas, com foco em escalabilidade, qualidade e confiabilidade.
-                        </p>
-
-                        <p>
-                            Minha experiência inclui o uso de Angular e React no frontend, além de Java (Spring) e TypeScript (Node.js) no backend. Trabalhei com desenvolvimento guiado por testes (Jest, Karma, JUnit e Mockito) e integração de microserviços, incluindo mensageria com RabbitMQ. Também possuo vivência em orquestração de containers com Docker e implementação de pipelines de CI/CD, sempre buscando otimizar processos e entregar valor de forma contínua.
-                        </p>
-
-                        <p>
-                            Motivado por desafios, busco constantemente aprimorar minhas habilidades e colaborar para que times de desenvolvimento alcancem resultados de alto impacto.
+                            Desenvolvedor Full Stack Sênior com mais de 6 anos construindo aplicações web em domínios como sistemas bancários, telemedicina veterinária e logística ferroviária. Especialista em Angular (v14, v16 e v18) e React (v17 e v18) no frontend, com background sólido em Java (Spring Boot) e Node.js no backend, cobrindo o ciclo completo de desenvolvimento: arquitetura de componentes, testes automatizados (Jest, Testing Library, Karma, Jasmine, JUnit, Mockito), pipelines CI/CD (Jenkins, GitHub Actions) e qualidade de código (SonarQube, Checkmarx).
                         </p>
                     </motion.div>
                 </div>
